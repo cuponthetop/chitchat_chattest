@@ -1,0 +1,20 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    h1= title
+    p Welcome to #{title}
+
+    ul#messages
+    form(action="")
+      input#m(autocomplete="off")
+      button Send
+
+    script(src='https://cdn.socket.io/socket.io-1.2.0.js')
+    script(src='http://code.jquery.com/jquery-1.11.1.js')
+    script(src='js/initIO.js')
+    script(src='js/sendMsg.js')
+    button(onclick="leaveRoom()") Leave
+    #status
